@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Criando um site responsivo do começo ao fim</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/geral.css">
-		<link rel="stylesheet" href="css/portfolio.css">
-		<link rel="stylesheet" href="css/plugins.css">
-	</head>
-	<body>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Criando um site responsivo do começo ao fim</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/geral.css">
+	<link rel="stylesheet" href="css/portfolio.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+
+<body>
+
+	<nav class="menu-responsivo">
+		<ul>
+			<li><a href="index.html">Início</a></li>
+			<li><a href="sobre.html">Sobre</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</nav>
+
+	<div class="layout">
 		<header>
 			<div class="container">
 				<div class="logo">
 					<a href="index.html">
-						<img src="" alt="Logo">
+						<img src="images/Logo.png" alt="Logo">
 					</a>
 				</div>
+
 				<div class="links">
 					<nav>
 						<ul>
@@ -26,6 +42,12 @@
 						</ul>
 					</nav>
 
+					<a class="toggle" href="javascript:;">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+
 					<ul class="social">
 						<li>
 							<a href="#"><i class="fa fa-facebook"></i></a>
@@ -34,14 +56,18 @@
 						<li>
 							<a href="#"><i class="fa fa-github-alt"></i></a>
 						</li>
+
+						<li class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+						</li>
 					</ul>
 				</div>
 
 				<h1>Meus <strong>Trabalhos</strong></h1>
 				<p>Lorem ipsum dolor sit amet.</p>
-			</div>		
+			</div>
 		</header>
-		
+
 		<main>
 			<section class="portfolio">
 				<div class="container">
@@ -152,14 +178,29 @@
 				</div>
 			</section>
 		</main>
-		
+
 		<footer>
 			<div class="logo-rodape">
 				<a href="index.html">
 					<img class="img-circle img-responsive" src="http://placehold.it/360x340.png" alt="Logo">
 				</a>
 				<p>2016 Todos os Direitos Reservados</p>
-			</div>	
+			</div>
 		</footer>
-	</body>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/wow/dist/wow.min.js"></script>
+	<script>
+		$(function () {
+			$('.toggle').click(function () {
+				$('.layout').toggleClass('ativo');
+				$('.menu-responsivo').toggleClass('ativo');
+				$(this).toggleClass('ativo');
+			});
+			new WOW().init();
+		});
+	</script>
+</body>
+
 </html>
