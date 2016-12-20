@@ -17,14 +17,25 @@ section.sobre
 			+breakpoint($tablet)
 				margin: 0 0 30px
 
+		.imagem
+			margin: 5px
+			border-radius: 50%
+			overflow: hidden
+			width: 200px
+			height: 200px
+			box-shadow: 1px 1px 8px #555
+
+
+
 		[class^="icone-"]
 			width: 90px
 			height: 90px
 			background-color: $azul-claro
-			+border-radius(120px)
+			+border-radius(50px)
 			text-align: center
 			line-height: 85px
 			color: $branco
+			margin: 2px
 			+font-size(55px)
 
 			+breakpoint($tablet)
@@ -33,7 +44,7 @@ section.sobre
 				height: 75px
 				line-height: 75px
 				+font-size(50px)
-				margin: 0 3px
+				margin: 2px
 
 			&.icone-lapis
 				+order(1)
