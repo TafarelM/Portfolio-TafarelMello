@@ -1,4 +1,4 @@
-# Portifolio-TafarelMello
+# Portfólio-TafarelMello
 Portifolio
 
-https://tafarelm.github.io/Portifolio-TafarelMello/
+https://tafarelm.github.io/Portfolio-TafarelMello/
