@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>WOW</title>
@@ -32,15 +33,13 @@
   </div>
   <script src="dist/wow.js"></script>
   <script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
+    wow = new WOW({
+      animateClass: 'animated',
+      offset: 100,
+      callback: function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
       }
-    );
+    });
     wow.init();
     document.getElementById('moar').onclick = function() {
       var section = document.createElement('section');
@@ -49,4 +48,5 @@
     };
   </script>
 </body>
+
 </html>
